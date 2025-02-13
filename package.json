@@ -1,9 +1,9 @@
 {
-  "name": "github-test",
+  "name": "pro2",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://bechux.github.io/PRO2/",
+"homepage": "https://github.com/Bechux/PRO2",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
