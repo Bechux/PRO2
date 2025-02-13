@@ -1,0 +1,442 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+body {
+  font-family: "K2D", serif; /* Apply K2D font globally */
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  color: white;
+}
+
+
+header {
+  text-align: center;
+  background-color: #222;
+  padding-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  z-index: 0; /* Ensure it's behind the text */
+}
+
+.hero h1,
+.hero p {
+  position: absolute;
+  z-index: 1; /* Place text above the gradient */
+  text-align: center;
+}
+
+.hero h1 {
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4em; /* Increased font size */
+  font-weight: 800; /* Bold title */
+}
+
+.hero p {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8em; /* Slightly larger subtitle */
+}
+
+.hero h1 a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Ensure it stays white */
+  font-weight: 700; /* Keep it bold */
+}
+
+.hero h1 a:hover {
+  color: #ffcc00; /* Optional: Highlight effect on hover */
+}
+
+nav {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+nav .linktext {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 700; /* Bold text */
+  transition: color 0.3s ease-in-out; /* Smooth transition */
+}
+
+nav .linktext:hover {
+  color: #ffcc00; /* Matching hover effect */
+}
+
+.about, .popular {
+  text-align: center;
+  margin: 40px auto;
+  width: 80%;
+}
+
+.recipe-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.recipe {
+  background-size: cover; /* Ensures the image covers the entire button */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image repetition */
+  padding: 20px;
+  width: 22%;
+  height: 250px; /* Adjust height to maintain proportions */
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.recipe h3,
+.recipe p,
+.recipe a {
+  position: relative;
+  z-index: 2;
+}
+
+.recipe h3 {
+  font-size: 1.8em; /* Bigger title */
+  font-weight: 800; /* Extra bold */
+  text-transform: uppercase; /* Optional: makes it stand out */
+  margin-bottom: 5px;
+}
+
+
+
+.recipe p {
+  font-size: 1.2em; /* Slightly bigger subtext */
+  font-weight: 400; /* Normal weight */
+  margin-bottom: 10px;
+}
+
+
+.recipe::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay to improve readability */
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.recipe a {
+  background-color: rgba(255, 204, 0, 0.8);
+  color: black;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.recipe a:hover {
+  background-color: rgba(255, 204, 0, 1);
+}
+
+.recipe button {
+  background-color: rgba(255, 204, 0, 0.8); /* Add background color */
+  color: black;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer; /* Makes it clear that the buttons are clickable */
+  z-index: 2; /* Ensure buttons are on top of the background */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition */
+}
+
+.recipe button:hover {
+  background-color: rgba(255, 204, 0, 1); /* Change color on hover */
+}
+
+
+
+@media (max-width: 768px) {
+  .hero {
+      height: 200px;
+  }
+
+  .hero h1 {
+      font-size: 2em;
+  }
+
+  .hero p {
+      font-size: 1.2em;
+  }
+
+  .auth-options {
+      text-align: center;
+      padding: 10px 0;
+  }
+
+  .recipe-list {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .recipe {
+      width: 90%;
+  }
+
+  nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+  }
+
+  nav a {
+      display: block;
+      margin: 5px 0;
+  }
+}
+
+footer {
+  background-color: #212121;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1em;
+  margin-top: 40px;
+}
+
+/* Popup Background Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup Container */
+.popup {
+  background: #222;
+  padding: 20px;
+  width: 50%;
+  max-width: 500px;
+  max-height: 80vh; /* Limits height */
+  overflow-y: auto; /* Enables scrolling */
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5em;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Recipe Image */
+.popup img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Ingredient List */
+.popup ul {
+  list-style: none;
+  padding: 0;
+}
+
+.popup li {
+  background: rgba(255, 204, 0, 0.8);
+  color: black;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+/* ------- FONTS ----------  */
+
+.k2d-thin {
+  font-family: "K2D", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.k2d-extralight {
+  font-family: "K2D", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.k2d-light {
+  font-family: "K2D", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.k2d-regular {
+  font-family: "K2D", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.k2d-medium {
+  font-family: "K2D", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.k2d-semibold {
+  font-family: "K2D", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.k2d-bold {
+  font-family: "K2D", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.k2d-extrabold {
+  font-family: "K2D", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.k2d-thin-italic {
+  font-family: "K2D", serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.k2d-extralight-italic {
+  font-family: "K2D", serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.k2d-light-italic {
+  font-family: "K2D", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.k2d-regular-italic {
+  font-family: "K2D", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.k2d-medium-italic {
+  font-family: "K2D", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.k2d-semibold-italic {
+  font-family: "K2D", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.k2d-bold-italic {
+  font-family: "K2D", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.k2d-extrabold-italic {
+  font-family: "K2D", serif;
+  font-weight: 800;
+  font-style: italic;
+}
